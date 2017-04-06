@@ -1,5 +1,4 @@
 /*For every even numbered element, have a light yellow background.*/
-
 .person:nth-child(even) {
 	background-color: lightyellow;
 }
@@ -13,3 +12,5 @@
 .selected {
 	border: 2px dotted purple;
 }
+
+
