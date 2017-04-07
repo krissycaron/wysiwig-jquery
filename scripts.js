@@ -1,6 +1,5 @@
 
-var input = document.getElementById("user-input");
-// var outputDiv = document.getElementById("output");
+// var input = document.getElementById("user-input");
 var data;
 
 
@@ -26,6 +25,15 @@ function doSomething(data){
 		card +=`</div>`;
 	$("#peopleContainer").append(card);
 	}
-
 }
 
+// function onFocusFunction(){
+// 	$("body").click(function(){
+// 	$("#user-input").focus();
+// 	});
+// }
+function focusingInput(){
+ ("body").click(function(){
+   ("#user-input").focus();
+ });
+}
