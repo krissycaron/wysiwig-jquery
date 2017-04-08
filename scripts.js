@@ -1,6 +1,7 @@
 
-var input = document.getElementById("user-input");
+var input = $("#user-input");
 var data;
+var clickedBio;
 
 
 $.ajax({
@@ -27,34 +28,42 @@ function doSomething(data){
 	}
 }
 
+ $("#peopleContainer").click(function(data){
+ 		clickedBio = data.target;
+ 		if (clickedBio.className === "bioClass"){
+   		input.focus();
+   		input.val(clickedBio.html);
+   		input.keyup(function(){
+   			clickedBio.html= input.val();
+   			console.log("keypress");
+   			if (window.event.keyCode === 13){
+   				clickedBio = ""; 
+   				input.val = ("");
+   				console.log("hi");
+   			}
+   		})
+   	}
+ });
+//    		else {
+//    			input.val("");
+//    		}
+
+
+
+
+
+
+
+
+
+
+
 // function onFocusFunction(){
 // 	$("body").click(function(){
 // 	$("#user-input").focus();
 // 	});
 // }
 // function (){
- $("#peopleContainer").click(function(data){
- 		var clickedBio = data.target;
- 	if (clickedBio.className === "bioClass"){
-   		input.focus();
-   		input.val(clickedBio.innerHTMl);
-   		input.keydown(function(){
-   			clickedBio.innerHTMl = input.val();
-   			console.log("keypress");
-   		});
-
-   	}
-
- }); 
-
-
-
-
-
-
-
-
-
 
 
 
